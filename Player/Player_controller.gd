@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
 
+var cyote_timer = 0.0
+var cyote_time = 0.1
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -13,8 +16,14 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+	# Cyote time.
+	if is_on_floor():
+		cyote_timer = 0.0
+	else:
+		cyote_timer += delta
+
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("Jump") and cyote_timer < cyote_time:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
