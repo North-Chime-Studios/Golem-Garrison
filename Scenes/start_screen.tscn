@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtcnwl1glby2b"]
+
+[ext_resource type="Texture2D" uid="uid://kk3ev8nkv1pf" path="res://Bilder Placeholders/Skjermbilde 2024-03-11 125910.png" id="1_sab2v"]
+
+[node name="Start_screen" type="Node2D"]
+
+[node name="Placeholder_sprite" type="Sprite2D" parent="."]
+position = Vector2(575.625, 325.25)
+scale = Vector2(0.556295, 0.728555)
+texture = ExtResource("1_sab2v")
+
+[node name="Camera2D" type="Camera2D" parent="Placeholder_sprite"]
+
+[node name="Start_button_Start_Screen" type="Button" parent="."]
+offset_left = 393.0
+offset_top = 279.0
+offset_right = 690.0
+offset_bottom = 435.0
+
+[node name="Exit_button_start_screen" type="Button" parent="."]
+offset_left = 377.0
+offset_top = 466.0
+offset_right = 700.0
+offset_bottom = 604.0
